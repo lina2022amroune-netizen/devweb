@@ -1,0 +1,243 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+img {/*c pour eviter que les photos debordent*/
+max-width: 100%;
+height: auto;
+}
+
+:root {
+--couleur-principale: #3A4844;
+--couleur-foncee: #C4DB68;
+--couleur-texte: #41413B;
+--couleur-fond: #E6E4DC;
+}
+
+body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--couleur-principale);
+    background-color: var(--couleur-fond);
+
+}
+
+
+header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    background-color: var(--couleur-principale);
+    /* padding: 20px; */
+
+}
+
+
+
+header nav ul{
+    display: flex;
+    list-style:none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline;
+}
+
+a:hover{
+    color: var(--couleur-foncee);
+}
+
+.titre-projets{
+    color: pink;
+}
+
+ol li {
+    display: inline-block;/*permet de placer les elements cote a cote*/
+    padding: 10px 15px;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+
+}
+.list-projet li{
+    display: block;
+    margin: 0;
+}
+
+button{
+    background-color: var(--couleur-foncee);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 16px;
+}
+
+button:hover{
+    background-color: var(--couleur-principale);
+    color: var(--couleur-fond);
+}
+
+
+footer {
+    background-color: var(--couleur-foncee);
+}
+
+.titre-acceuil{
+    color: var(--couleur-foncee);
+    font-size:36px;
+    line-height: 1.1;
+
+
+}
+.titre-acceuil span{
+    display: block;
+    font-size:24px;
+    color: var(--couleur-fond);
+} 
+.presentation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+}
+.pres{
+    flex: 1;
+    font-size: 40px;
+}
+
+.photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+.liste-diplomes{
+    display: inline;
+    gap: 10px;
+}
+.liste-diplomes li{
+    border: 1px solid var(--couleur-principale);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    list-style: none;/*enlever les numeros fes liste */
+    margin: 5px;
+    white-space: nowrap; /* empeche le text de revenir a la ligne pour empecher les elements flexbox c flex-wrap */
+}
+h2{
+    color: var(--couleur-principale);
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-family: georgia,serif ;
+
+
+}
+.liste-longues{
+
+    display: inline;
+    gap: 10px;
+    
+}
+.liste-longues li{
+    border: 1px solid var(--couleur-principale);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    list-style: none;
+   
+}
+.list-projet{
+    display: grid;
+    grid-template-columns:repeat(3, 150px);/*ici c pour ne peut pas repeter 3fois la mm valeur*/
+    gap: 20px;
+    
+}
+.projet-vedette{
+    grid-column: span 2;/*ici l'element prendra deux colonnes*/
+}
+
+/*formulaire*/
+
+.conteneur-formulaire{
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    border: 1px solid var(--couleur-principale);
+    background-color: var(--couleur-fond);
+    box-shadow: 0 0 15px rgba(104, 122, 112, 0.4);
+}
+.page-contact{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--couleur-fond);
+    
+}
+.formulaire input,
+.formulaire select,
+.formulaire textarea{
+    margin-bottom:2px;
+}
+
+.formulaire{
+   
+    background-color: var(--couleur-principale);
+    margin: 0;
+    padding: 10px;
+    
+}
+
+label{
+    color: var(--couleur-foncee);
+    font-size: 18px;
+    font-weight:500;
+
+}
+.age1,.age2{
+    color: white;
+}
+.titreform{
+    color: var(--couleur-principale);
+}
+.lien-acteuil{
+    color: var(--couleur-principale);
+    text-decoration: none;
+}
+.lien-acteuil:hover{
+    color: var(--couleur-fond);
+}
+.tete-form{
+    background-color: var(--couleur-foncee);
+}
+
+@media (max-width: 768px) {
+.list-projet {
+grid-template-columns: 1fr;
+}
+header {
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+}
+.presentation {
+flex-direction: column;
+align-items: flex-start;
+}
+}
